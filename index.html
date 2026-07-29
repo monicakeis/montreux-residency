@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Montreux Residency · Eastwood Montreux International School</title>
+<meta name="description" content="A short-stay residency at Eastwood Montreux International School. Château d'Arvel, Lake Léman, Montreux. Opening September 2026.">
+<meta name="theme-color" content="#500591">
+<meta property="og:title" content="The Montreux Residency">
+<meta property="og:description" content="A real Eastwood Montreux experience. On your terms.">
+<meta property="og:image" content="assets/photos/aerial-lake.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&display=swap">
+<link rel="preload" as="image" href="assets/photos/chateau-garden.jpg" fetchpriority="high">
+<style>
+:root{
+--royal:#500591;--royal-deep:#33045C;--lilac:#B494CB;
+--ink:#14161C;--ink-70:rgba(20,22,28,.7);--ink-55:rgba(20,22,28,.56);
+--s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:64px;--s6:clamp(56px,10vw,104px);
+--m:clamp(20px,6vw,80px);--gut:max(var(--m),calc((100% - 1440px)/2));--nav:60px;
+--e:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{background:#fff;color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.5;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--royal);text-decoration:none}
+a:hover{color:var(--royal-deep)}
+:focus-visible{outline:2px solid var(--royal);outline-offset:3px}
+.hero :focus-visible,.form :focus-visible,.nav :focus-visible{outline-color:#fff}
+::selection{background:var(--royal);color:#fff}
+.it{font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-weight:400}
+.t-xl{font-size:clamp(46px,12vw,112px);font-weight:800;line-height:.94;letter-spacing:-.045em}
+.t-l{font-size:clamp(26px,6.4vw,44px);font-weight:700;line-height:1.08;letter-spacing:-.03em}
+.t-m{font-size:17px;line-height:1.6}
+.t-s{font-size:11px;line-height:1.4;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+@media(min-width:900px){.t-m{font-size:19px}}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:45;height:var(--nav);display:flex;align-items:center;justify-content:space-between;gap:var(--s2);padding:0 var(--gut);background:rgba(80,5,145,0);transition:background-color .4s var(--e),height .4s var(--e)}
+.nav.solid{background:rgba(51,4,92,.94);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%)}
+.nav img{height:38px;width:auto;display:block}
+.nav .cta{display:inline-flex;align-items:center;gap:10px;min-height:40px;padding:0 18px;border:1px solid rgba(255,255,255,.6);border-radius:999px;color:#fff;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;transition:background-color .3s var(--e),color .3s var(--e)}
+.nav .cta:hover{background:#fff;color:var(--royal)}
+.nav .cta .ar{width:14px;height:1px;background:currentColor;position:relative;transition:width .3s var(--e)}
+.nav .cta .ar::after{content:"";position:absolute;right:0;top:-3px;width:6px;height:6px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
+.nav .cta:hover .ar{width:22px}
+@media(min-width:900px){.nav img{height:56px}}
+
+/* 1 hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:calc(var(--nav) + var(--s4)) var(--gut) var(--s4);color:#fff;overflow:hidden;isolation:isolate;border-bottom:3px solid var(--royal)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(51,4,92,.5) 0%,rgba(20,6,32,.26) 38%,rgba(20,6,32,.84) 100%)}
+.hero .eyebrow{display:flex;align-items:center;gap:12px;color:#fff}
+.hero .eyebrow::before{content:"";width:20px;height:1px;background:var(--lilac);flex:0 0 20px}
+.hero h1{margin:var(--s3) 0 var(--s2);max-width:14ch}
+.hero .sub{font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-size:clamp(21px,5.8vw,32px);line-height:1.28;max-width:24ch}
+.hero .place{margin-top:var(--s4);padding-top:var(--s2);border-top:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.9)}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 24px;background:#fff;color:var(--royal);border-radius:999px;font-size:11px;line-height:1;letter-spacing:.2em;text-transform:uppercase;font-weight:600;transition:background-color .3s var(--e),color .3s var(--e)}
+.btn:hover{background:var(--royal);color:#fff}
+.btn .ar{width:16px;height:1px;background:currentColor;position:relative;transition:width .3s var(--e)}
+.btn:hover .ar{width:26px}
+.btn .ar::after{content:"";position:absolute;right:0;top:-3px;width:6px;height:6px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
+.hero .btn{align-self:flex-start;margin-top:var(--s3)}
+
+/* 2 pitch */
+.pitch{padding:var(--s6) var(--gut);position:relative}
+.pitch::before{content:"";position:absolute;left:var(--gut);top:0;width:64px;height:3px;background:var(--royal)}
+.phead{display:grid;gap:var(--s3);align-items:end}
+.pitch h2{max-width:14ch;font-size:clamp(30px,7.4vw,58px);font-weight:800;line-height:1.02;letter-spacing:-.035em}
+.pitch h2 .it{color:var(--royal);font-weight:400;letter-spacing:-.02em}
+.pitch .lead{color:var(--ink-70);max-width:44ch;font-size:clamp(15px,1.15vw,18px);line-height:1.6}
+@media(min-width:900px){.phead{grid-template-columns:1.05fr 1fr;gap:var(--s5)}}
+
+.rates{margin-top:var(--s5);border-top:2px solid var(--ink);display:grid;grid-template-columns:1fr}
+.rate{padding:var(--s3) 0;border-bottom:1px solid rgba(20,22,28,.14);display:flex;align-items:baseline;gap:var(--s2)}
+.rate .len{color:var(--ink-55);flex:0 0 auto}
+.rate .fig{font-weight:800;font-size:clamp(30px,8.4vw,52px);line-height:1;letter-spacing:-.04em;color:var(--royal);font-variant-numeric:tabular-nums;margin-left:auto;white-space:nowrap}
+.rate .save{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink-55);flex:0 0 auto;min-width:74px;text-align:right}
+@media(min-width:820px){
+.rates{grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid rgba(20,22,28,.14)}
+.rate{flex-direction:column;align-items:flex-start;gap:var(--s2);padding:var(--s3) var(--s3) var(--s4);border-bottom:0;border-right:1px solid rgba(20,22,28,.14)}
+.rate:first-child{padding-left:0}
+.rate:last-child{border-right:0;padding-right:0}
+.rate .fig{margin-left:0;font-size:clamp(34px,4.2vw,58px)}
+.rate .save{text-align:left;min-width:0}
+}
+.pfine{display:grid;gap:var(--s3);margin-top:var(--s3)}
+.pfine .rfine{font-size:12.5px;line-height:1.55;letter-spacing:.01em;color:var(--ink-55)}
+.pfine .note{font-size:14.5px;line-height:1.6;color:var(--ink);padding-left:var(--s3);border-left:2px solid var(--royal)}
+.pfine .note b{font-weight:600;color:var(--royal)}
+@media(min-width:900px){.pfine{grid-template-columns:1fr 1fr;gap:var(--s5);align-items:start;margin-top:var(--s4)}}
+
+/* 3 strip */
+.strip{position:relative;background:#160722;overflow:hidden}
+.strip .row{display:flex;gap:2px;width:max-content;animation:marq 150s linear infinite}
+.strip:hover .row{animation-play-state:paused}
+.strip figure{position:relative;margin:0;height:clamp(230px,38svh,380px);flex:0 0 auto}
+.strip img{height:100%;width:auto;max-width:none;display:block}
+.strip figure{min-width:120px}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-size:13px;line-height:1.3;color:#fff;background:linear-gradient(180deg,rgba(22,7,34,0),rgba(22,7,34,.8))}
+@keyframes marq{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media(prefers-reduced-motion:reduce){.strip .row{animation:none;width:auto;overflow-x:auto;scroll-snap-type:x mandatory}.strip figure{scroll-snap-align:start}}
+
+/* 4 form */
+.form{background:var(--royal);color:#fff;padding:var(--s6) var(--gut) var(--s5)}
+.form h2{color:#fff;margin-bottom:var(--s4)}
+.tf-frame{background:transparent;padding:0;margin-inline:calc(-1 * var(--gut));width:100vw;max-width:100vw}
+#tf{width:100%;height:calc(100svh - 96px);min-height:560px}
+#tf>div,#tf .tf-v1-widget,#tf iframe{height:100%!important;width:100%!important;border:0!important;display:block}
+.tf-alt{margin-top:1.5rem;text-align:center;font-size:.875rem;line-height:1.5;color:rgba(255,255,255,.85)}
+.tf-alt a{color:rgba(255,255,255,.85);text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:6px 0}
+.tf-alt a:hover{color:#fff}
+@media(min-width:700px){.tf-frame{margin-inline:0;width:auto;max-width:none;padding:0}#tf{height:min(86svh,860px)}}
+.foot{margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid rgba(255,255,255,.28)}
+.foot .fl{display:grid;gap:var(--s3)}
+.foot img{height:34px;width:auto;display:block}
+.foot .fl>a::after{display:none}
+.foot .lines{display:grid;gap:2px var(--s4);font-size:12.5px;line-height:1.55;letter-spacing:0}
+.foot a{color:#fff;display:inline-block;position:relative}
+.foot a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s var(--e)}
+.foot a:hover{color:#fff}
+.foot a:hover::after{transform:scaleX(1)}
+.foot .lines span{color:rgba(255,255,255,.72)}
+.foot .rule{margin-top:var(--s4);padding-top:var(--s2);border-top:1px solid rgba(255,255,255,.18);display:flex;flex-wrap:wrap;gap:6px var(--s4);justify-content:space-between;font-size:9.5px;line-height:1.6;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.58)}
+@media(min-width:700px){.foot .fl{grid-template-columns:auto 1fr;align-items:center;gap:var(--s5)}.foot img{height:44px}.foot .lines{grid-template-columns:auto auto;justify-content:start}}
+
+/* sticky apply */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;justify-content:center;padding:12px var(--m) 16px;background:linear-gradient(180deg,rgba(80,5,145,0),rgba(80,5,145,.96));transform:translateY(120%);transition:transform .4s var(--e);pointer-events:none}
+.sticky.on{transform:none;pointer-events:auto}
+.sticky a{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 26px;border-radius:999px;background:#fff;color:var(--royal);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+@media(min-width:900px){.sticky{display:none}}
+
+@media(min-width:900px){:root{--nav:76px}}
+
+/* mobile pass */
+@media(max-width:699px){
+.nav{height:var(--nav);padding:0 var(--m)}
+.nav img{height:34px}
+.nav .cta{min-height:38px;padding:0 14px;font-size:9.5px;letter-spacing:.16em}
+.hero{padding-bottom:calc(var(--s4) + 8px)}
+.hero .place{margin-top:var(--s3)}
+.hero .btn{width:100%;justify-content:space-between;max-width:320px}
+.pitch{padding-bottom:var(--s5)}
+.rate .fig{font-size:clamp(34px,11vw,46px)}
+.strip figure{height:clamp(200px,32svh,280px)}
+.foot .lines a,.foot .lines span{padding:3px 0}
+.form{padding-bottom:calc(var(--s5) + 68px)}
+}
+@media(max-width:359px){.t-xl{font-size:40px}.rate .len{font-size:10px}}
+
+.note b{font-weight:600;color:var(--royal)}
+
+/* motion */
+html.m [data-r]{opacity:0;transform:translateY(12px)}
+html.m [data-r].in{opacity:1;transform:none;transition:opacity .5s ease-out,transform .5s ease-out}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{transition:none!important;animation:none!important}
+html.m [data-r]{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Primary">
+<a href="#top" aria-label="Eastwood Montreux International School"><img src="assets/em-logo-white-2.png" alt="Eastwood Montreux International School" width="646" height="197"></a>
+<a href="#apply" class="cta">Apply <span class="ar" aria-hidden="true"></span></a>
+</nav>
+
+<header class="hero" id="top">
+<img src="assets/photos/chateau-garden.jpg" alt="Château d'Arvel seen from the gardens, Montreux" fetchpriority="high" decoding="async">
+<p class="t-s eyebrow">A short-stay residency · Opening September 2026</p>
+<h1 class="t-xl">The Montreux <span class="it">Residency</span>.</h1>
+<p class="sub">A real Eastwood Montreux experience. On your terms.</p>
+<a href="#apply" class="btn">Apply <span class="ar" aria-hidden="true"></span></a>
+<p class="t-s place">Château d'Arvel · Lake Léman · Montreux</p>
+</header>
+
+<section class="pitch">
+<div class="phead">
+<h2 data-r>A week inside<br><span class="it">a Swiss school.</span></h2>
+<p class="lead" data-r>Live at Château d'Arvel. Academics in the morning, the IMPACT program in the afternoon, boarding life in the evening. One week, two, or four.</p>
+</div>
+<div class="rates" data-r>
+<div class="rate"><p class="t-s len">One week</p><p class="fig">CHF 2,500</p><p class="save">&nbsp;</p></div>
+<div class="rate"><p class="t-s len">Two weeks</p><p class="fig">CHF 4,000</p><p class="save">Save 20%</p></div>
+<div class="rate"><p class="t-s len">Four weeks</p><p class="fig">CHF 7,000</p><p class="save">Save 30%</p></div>
+</div>
+<div class="pfine">
+<p class="rfine" data-r>All-inclusive. Flights not included. Application fee CHF 500.</p>
+<p class="note" data-r>Newly enrolled at an Eastwood school for 2026-27?<br><b>Your first week is included.</b> Contact your school to confirm.</p>
+</div>
+</section>
+
+<section class="strip" aria-label="Château d'Arvel">
+<div class="row">
+<figure><img src="assets/photos/chateau-facade.jpg" alt="The château façade" decoding="async"><figcaption>The château façade.</figcaption></figure>
+<figure><img src="assets/photos/red-balconies.png" alt="Red shutters and balconies on the campus façade" decoding="async"><figcaption>Red shutters and balconies.</figcaption></figure>
+<figure><img src="assets/photos/lake-mountains.png" alt="Lake Léman and the Alps seen through the campus trees" decoding="async"><figcaption>Lake Léman and the Alps.</figcaption></figure>
+<figure><img src="assets/photos/reception-corridor.png" alt="The reception corridor" decoding="async"><figcaption>The reception corridor.</figcaption></figure>
+<figure><img src="assets/photos/salon-door.png" alt="A doorway into the salon" decoding="async"><figcaption>A doorway into the salon.</figcaption></figure>
+<figure><img src="assets/photos/turret.jpg" alt="The château turret and stained-glass windows" decoding="async"><figcaption>Turret and stained glass.</figcaption></figure>
+<figure><img src="assets/photos/turret-2.jpg" alt="The stone turret in detail" decoding="async"><figcaption>The stone turret.</figcaption></figure>
+<figure><img src="assets/photos/entrance.jpg" alt="The school entrance" decoding="async"><figcaption>The entrance.</figcaption></figure>
+<figure><img src="assets/photos/corridor.jpg" alt="The main corridor" decoding="async"><figcaption>Main corridor.</figcaption></figure>
+<figure><img src="assets/photos/stained-glass.jpg" alt="The stained-glass gallery" decoding="async"><figcaption>Stained-glass gallery.</figcaption></figure>
+<figure><img src="assets/photos/staircase.jpg" alt="The main staircase" decoding="async"><figcaption>The main staircase.</figcaption></figure>
+<figure><img src="assets/photos/boarding-room.jpg" alt="A boarding room" decoding="async"><figcaption>A boarding room.</figcaption></figure>
+<figure><img src="assets/photos/wardrobe-room.jpg" alt="A shared boarding room" decoding="async"><figcaption>A shared room.</figcaption></figure>
+<figure><img src="assets/photos/desk-detail.jpg" alt="A boarding-room desk" decoding="async"><figcaption>A boarding-room desk.</figcaption></figure>
+<figure><img src="assets/photos/study-room.jpg" alt="A study room" decoding="async"><figcaption>A study room.</figcaption></figure>
+<figure><img src="assets/photos/classroom.jpg" alt="A classroom" decoding="async"><figcaption>A classroom.</figcaption></figure>
+<figure><img src="assets/photos/classroom-2.jpg" alt="A classroom with study carrels" decoding="async"><figcaption>Study carrels.</figcaption></figure>
+<figure><img src="assets/photos/dining-hall.jpg" alt="The dining hall" decoding="async"><figcaption>Dining hall.</figcaption></figure>
+<figure><img src="assets/photos/common-room.jpg" alt="The common room" decoding="async"><figcaption>Common room.</figcaption></figure>
+<figure><img src="assets/photos/court-lake.jpg" alt="The sports court above the lake" decoding="async"><figcaption>Sports court, above the lake.</figcaption></figure>
+<figure><img src="assets/photos/sports-court.jpg" alt="The sports court under the cedars" decoding="async"><figcaption>The court under the cedars.</figcaption></figure>
+<figure><img src="assets/photos/garden-totem.jpg" alt="The gardens" decoding="async"><figcaption>The gardens.</figcaption></figure>
+<figure><img src="assets/photos/chateau-garden-2.jpg" alt="The château lawns" decoding="async"><figcaption>The lawns.</figcaption></figure>
+<figure><img src="assets/photos/aerial-lake.jpg" alt="The campus above Lake Léman" decoding="async"><figcaption>Campus above Lake Léman.</figcaption></figure>
+<figure><img src="assets/photos/lake-dock.jpg" alt="A jetty on Lake Léman" decoding="async"><figcaption>A jetty on Lake Léman.</figcaption></figure>
+<figure><img src="assets/photos/swiss-flag-boat.jpg" alt="A lake steamer leaving the quay" decoding="async"><figcaption>The lake steamers.</figcaption></figure>
+<figure><img src="assets/photos/gruyeres.jpg" alt="The village and castle of Gruyères" decoding="async"><figcaption>Gruyères.</figcaption></figure>
+<figure><img src="assets/photos/chocolate.jpg" alt="Inside a Swiss chocolate factory" decoding="async"><figcaption>Chocolate factory.</figcaption></figure>
+<figure><img src="assets/photos/alpine-village.jpg" alt="An alpine village" decoding="async"><figcaption>The mountains, an hour away.</figcaption></figure>
+<figure><img src="assets/photos/geneva.jpg" alt="Geneva on the lake" decoding="async"><figcaption>Geneva.</figcaption></figure>
+<figure><img src="assets/photos/chateau-facade.jpg" alt="The château façade" decoding="async"><figcaption>The château façade.</figcaption></figure>
+<figure><img src="assets/photos/red-balconies.png" alt="Red shutters and balconies on the campus façade" decoding="async"><figcaption>Red shutters and balconies.</figcaption></figure>
+<figure><img src="assets/photos/lake-mountains.png" alt="Lake Léman and the Alps seen through the campus trees" decoding="async"><figcaption>Lake Léman and the Alps.</figcaption></figure>
+<figure><img src="assets/photos/reception-corridor.png" alt="The reception corridor" decoding="async"><figcaption>The reception corridor.</figcaption></figure>
+<figure><img src="assets/photos/salon-door.png" alt="A doorway into the salon" decoding="async"><figcaption>A doorway into the salon.</figcaption></figure>
+<figure><img src="assets/photos/turret.jpg" alt="The château turret and stained-glass windows" decoding="async"><figcaption>Turret and stained glass.</figcaption></figure>
+<figure><img src="assets/photos/turret-2.jpg" alt="The stone turret in detail" decoding="async"><figcaption>The stone turret.</figcaption></figure>
+<figure><img src="assets/photos/entrance.jpg" alt="The school entrance" decoding="async"><figcaption>The entrance.</figcaption></figure>
+<figure><img src="assets/photos/corridor.jpg" alt="The main corridor" decoding="async"><figcaption>Main corridor.</figcaption></figure>
+<figure><img src="assets/photos/stained-glass.jpg" alt="The stained-glass gallery" decoding="async"><figcaption>Stained-glass gallery.</figcaption></figure>
+<figure><img src="assets/photos/staircase.jpg" alt="The main staircase" decoding="async"><figcaption>The main staircase.</figcaption></figure>
+<figure><img src="assets/photos/boarding-room.jpg" alt="A boarding room" decoding="async"><figcaption>A boarding room.</figcaption></figure>
+<figure><img src="assets/photos/wardrobe-room.jpg" alt="A shared boarding room" decoding="async"><figcaption>A shared room.</figcaption></figure>
+<figure><img src="assets/photos/desk-detail.jpg" alt="A boarding-room desk" decoding="async"><figcaption>A boarding-room desk.</figcaption></figure>
+<figure><img src="assets/photos/study-room.jpg" alt="A study room" decoding="async"><figcaption>A study room.</figcaption></figure>
+<figure><img src="assets/photos/classroom.jpg" alt="A classroom" decoding="async"><figcaption>A classroom.</figcaption></figure>
+<figure><img src="assets/photos/classroom-2.jpg" alt="A classroom with study carrels" decoding="async"><figcaption>Study carrels.</figcaption></figure>
+<figure><img src="assets/photos/dining-hall.jpg" alt="The dining hall" decoding="async"><figcaption>Dining hall.</figcaption></figure>
+<figure><img src="assets/photos/common-room.jpg" alt="The common room" decoding="async"><figcaption>Common room.</figcaption></figure>
+<figure><img src="assets/photos/court-lake.jpg" alt="The sports court above the lake" decoding="async"><figcaption>Sports court, above the lake.</figcaption></figure>
+<figure><img src="assets/photos/sports-court.jpg" alt="The sports court under the cedars" decoding="async"><figcaption>The court under the cedars.</figcaption></figure>
+<figure><img src="assets/photos/garden-totem.jpg" alt="The gardens" decoding="async"><figcaption>The gardens.</figcaption></figure>
+<figure><img src="assets/photos/chateau-garden-2.jpg" alt="The château lawns" decoding="async"><figcaption>The lawns.</figcaption></figure>
+<figure><img src="assets/photos/aerial-lake.jpg" alt="The campus above Lake Léman" decoding="async"><figcaption>Campus above Lake Léman.</figcaption></figure>
+<figure><img src="assets/photos/lake-dock.jpg" alt="A jetty on Lake Léman" decoding="async"><figcaption>A jetty on Lake Léman.</figcaption></figure>
+<figure><img src="assets/photos/swiss-flag-boat.jpg" alt="A lake steamer leaving the quay" decoding="async"><figcaption>The lake steamers.</figcaption></figure>
+<figure><img src="assets/photos/gruyeres.jpg" alt="The village and castle of Gruyères" decoding="async"><figcaption>Gruyères.</figcaption></figure>
+<figure><img src="assets/photos/chocolate.jpg" alt="Inside a Swiss chocolate factory" decoding="async"><figcaption>Chocolate factory.</figcaption></figure>
+<figure><img src="assets/photos/alpine-village.jpg" alt="An alpine village" decoding="async"><figcaption>The mountains, an hour away.</figcaption></figure>
+<figure><img src="assets/photos/geneva.jpg" alt="Geneva on the lake" decoding="async"><figcaption>Geneva.</figcaption></figure>
+</div>
+</section>
+
+<section class="form" id="apply">
+<h2 class="t-l" data-r>One application.</h2>
+<div class="tf-frame" data-r>
+<div id="tf"></div>
+</div>
+<p class="tf-alt">
+  <a id="tf-fallback" href="https://form.typeform.com/to/OLHy2RO6" target="_blank" rel="noopener">Having trouble? Open the application in a new tab</a>
+</p>
+<script>
+  (function(){
+    const p = new URLSearchParams(location.search);
+    const parts = ['school','version','source']
+      .map(k => k + '=' + (p.get(k) || ''))
+      .join('&');
+    document.getElementById('tf-fallback').href =
+      'https://form.typeform.com/to/OLHy2RO6#' + parts;
+  })();
+</script>
+<div class="foot">
+<div class="fl">
+<a href="https://eastwoodmontreux.ch" target="_blank" rel="noopener" aria-label="Eastwood Montreux International School"><img src="assets/em-logo-white-2.png" alt="Eastwood Montreux International School" width="646" height="197" loading="lazy"></a>
+<div class="lines">
+<div>
+<a href="mailto:admissions@eastwoodmontreux.ch">admissions@eastwoodmontreux.ch</a><br>
+<a href="tel:+41765427225">+41 76 542 72 25</a>
+</div>
+<div>
+<span>Château d'Arvel, Montreux, Switzerland</span><br>
+<a href="https://eastwoodmontreux.ch" target="_blank" rel="noopener">eastwoodmontreux.ch</a>
+</div>
+</div>
+</div>
+<p class="rule"><span>Part of <a href="https://www.eastwoodschools.com" target="_blank" rel="noopener">Eastwood Schools</a></span><span>© Eastwood Montreux International School 2026</span></p>
+</div>
+</section>
+
+<div class="sticky" id="sticky"><a href="#apply">Apply <span class="ar" aria-hidden="true"></span></a></div>
+
+<script src="https://embed.typeform.com/next/embed.js"></script>
+<script>
+  const p = new URLSearchParams(location.search);
+  const hidden = {
+      school: p.get('school') || '',
+      version: p.get('version') || '',
+      source: p.get('source') || ''
+  };
+  window.tf.createWidget('OLHy2RO6', {
+    container: document.querySelector('#tf'),
+    hidden: hidden
+  });
+
+  setTimeout(function(){
+    var box = document.querySelector('#tf');
+    if(box && !box.querySelector('iframe')){
+      box.innerHTML = '<iframe title="The Montreux Residency application" src="https://form.typeform.com/to/OLHy2RO6" style="width:100%;height:100%;border:0;display:block" allow="camera; microphone; autoplay; encrypted-media;"></iframe>';
+    }
+  }, 2500);
+</script>
+<script>
+(function(){
+  var els = document.querySelectorAll('[data-r]');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('m');
+  var io = new IntersectionObserver(function(en){
+    en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.1, rootMargin:'0px 0px -5% 0px'});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>
+(function(){
+  var nav = document.getElementById('nav');
+  if(nav){
+    var onScroll = function(){ nav.classList.toggle('solid', scrollY > 40); };
+    addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  }
+
+  var bar2 = document.getElementById('sticky'), hero = document.querySelector('.hero'), form = document.getElementById('apply');
+  if(bar2 && hero && 'IntersectionObserver' in window){
+    var seen = {hero:true, form:false};
+    function upd(){ bar2.classList.toggle('on', !seen.hero && !seen.form); }
+    new IntersectionObserver(function(en){ en.forEach(function(e){ seen.hero = e.isIntersecting; upd(); }); },{threshold:.15}).observe(hero);
+    new IntersectionObserver(function(en){ en.forEach(function(e){ seen.form = e.isIntersecting; upd(); }); },{threshold:.08}).observe(form);
+  }
+})();
+</script>
+</body>
+</html>
