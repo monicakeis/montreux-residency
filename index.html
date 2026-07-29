@@ -94,14 +94,12 @@ a:hover{color:var(--royal-deep)}
 
 /* 3 strip */
 .strip{position:relative;background:#160722;overflow:hidden}
-.strip .row{display:flex;gap:2px;width:max-content;animation:marq 150s linear infinite}
-.strip:hover .row{animation-play-state:paused}
+.strip .row{display:flex;gap:2px;width:max-content;will-change:transform}
 .strip figure{position:relative;margin:0;height:clamp(230px,38svh,380px);flex:0 0 auto}
 .strip img{height:100%;width:auto;max-width:none;display:block}
 .strip figure{min-width:120px}
 .strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-size:13px;line-height:1.3;color:#fff;background:linear-gradient(180deg,rgba(22,7,34,0),rgba(22,7,34,.8))}
-@keyframes marq{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
-@media(prefers-reduced-motion:reduce){.strip .row{animation:none;width:auto;overflow-x:auto;scroll-snap-type:x mandatory}.strip figure{scroll-snap-align:start}}
+@media(prefers-reduced-motion:reduce){.strip{overflow-x:auto;scroll-snap-type:x mandatory}.strip figure{scroll-snap-align:start}}
 
 /* 4 form */
 .form{background:var(--royal);color:#fff;padding:var(--s6) var(--gut) var(--s5)}
@@ -195,37 +193,7 @@ html.m [data-r]{opacity:1!important;transform:none!important}
 </section>
 
 <section class="strip" aria-label="Château d'Arvel">
-<div class="row">
-<figure><img src="assets/photos/chateau-facade.jpg" alt="The château façade" decoding="async"><figcaption>The château façade.</figcaption></figure>
-<figure><img src="assets/photos/red-balconies.png" alt="Red shutters and balconies on the campus façade" decoding="async"><figcaption>Red shutters and balconies.</figcaption></figure>
-<figure><img src="assets/photos/lake-mountains.png" alt="Lake Léman and the Alps seen through the campus trees" decoding="async"><figcaption>Lake Léman and the Alps.</figcaption></figure>
-<figure><img src="assets/photos/reception-corridor.png" alt="The reception corridor" decoding="async"><figcaption>The reception corridor.</figcaption></figure>
-<figure><img src="assets/photos/salon-door.png" alt="A doorway into the salon" decoding="async"><figcaption>A doorway into the salon.</figcaption></figure>
-<figure><img src="assets/photos/turret.jpg" alt="The château turret and stained-glass windows" decoding="async"><figcaption>Turret and stained glass.</figcaption></figure>
-<figure><img src="assets/photos/turret-2.jpg" alt="The stone turret in detail" decoding="async"><figcaption>The stone turret.</figcaption></figure>
-<figure><img src="assets/photos/entrance.jpg" alt="The school entrance" decoding="async"><figcaption>The entrance.</figcaption></figure>
-<figure><img src="assets/photos/corridor.jpg" alt="The main corridor" decoding="async"><figcaption>Main corridor.</figcaption></figure>
-<figure><img src="assets/photos/stained-glass.jpg" alt="The stained-glass gallery" decoding="async"><figcaption>Stained-glass gallery.</figcaption></figure>
-<figure><img src="assets/photos/staircase.jpg" alt="The main staircase" decoding="async"><figcaption>The main staircase.</figcaption></figure>
-<figure><img src="assets/photos/boarding-room.jpg" alt="A boarding room" decoding="async"><figcaption>A boarding room.</figcaption></figure>
-<figure><img src="assets/photos/wardrobe-room.jpg" alt="A shared boarding room" decoding="async"><figcaption>A shared room.</figcaption></figure>
-<figure><img src="assets/photos/desk-detail.jpg" alt="A boarding-room desk" decoding="async"><figcaption>A boarding-room desk.</figcaption></figure>
-<figure><img src="assets/photos/study-room.jpg" alt="A study room" decoding="async"><figcaption>A study room.</figcaption></figure>
-<figure><img src="assets/photos/classroom.jpg" alt="A classroom" decoding="async"><figcaption>A classroom.</figcaption></figure>
-<figure><img src="assets/photos/classroom-2.jpg" alt="A classroom with study carrels" decoding="async"><figcaption>Study carrels.</figcaption></figure>
-<figure><img src="assets/photos/dining-hall.jpg" alt="The dining hall" decoding="async"><figcaption>Dining hall.</figcaption></figure>
-<figure><img src="assets/photos/common-room.jpg" alt="The common room" decoding="async"><figcaption>Common room.</figcaption></figure>
-<figure><img src="assets/photos/court-lake.jpg" alt="The sports court above the lake" decoding="async"><figcaption>Sports court, above the lake.</figcaption></figure>
-<figure><img src="assets/photos/sports-court.jpg" alt="The sports court under the cedars" decoding="async"><figcaption>The court under the cedars.</figcaption></figure>
-<figure><img src="assets/photos/garden-totem.jpg" alt="The gardens" decoding="async"><figcaption>The gardens.</figcaption></figure>
-<figure><img src="assets/photos/chateau-garden-2.jpg" alt="The château lawns" decoding="async"><figcaption>The lawns.</figcaption></figure>
-<figure><img src="assets/photos/aerial-lake.jpg" alt="The campus above Lake Léman" decoding="async"><figcaption>Campus above Lake Léman.</figcaption></figure>
-<figure><img src="assets/photos/lake-dock.jpg" alt="A jetty on Lake Léman" decoding="async"><figcaption>A jetty on Lake Léman.</figcaption></figure>
-<figure><img src="assets/photos/swiss-flag-boat.jpg" alt="A lake steamer leaving the quay" decoding="async"><figcaption>The lake steamers.</figcaption></figure>
-<figure><img src="assets/photos/gruyeres.jpg" alt="The village and castle of Gruyères" decoding="async"><figcaption>Gruyères.</figcaption></figure>
-<figure><img src="assets/photos/chocolate.jpg" alt="Inside a Swiss chocolate factory" decoding="async"><figcaption>Chocolate factory.</figcaption></figure>
-<figure><img src="assets/photos/alpine-village.jpg" alt="An alpine village" decoding="async"><figcaption>The mountains, an hour away.</figcaption></figure>
-<figure><img src="assets/photos/geneva.jpg" alt="Geneva on the lake" decoding="async"><figcaption>Geneva.</figcaption></figure>
+<div class="row" id="striprow">
 <figure><img src="assets/photos/chateau-facade.jpg" alt="The château façade" decoding="async"><figcaption>The château façade.</figcaption></figure>
 <figure><img src="assets/photos/red-balconies.png" alt="Red shutters and balconies on the campus façade" decoding="async"><figcaption>Red shutters and balconies.</figcaption></figure>
 <figure><img src="assets/photos/lake-mountains.png" alt="Lake Léman and the Alps seen through the campus trees" decoding="async"><figcaption>Lake Léman and the Alps.</figcaption></figure>
@@ -330,6 +298,30 @@ html.m [data-r]{opacity:1!important;transform:none!important}
 </script>
 <script>
 (function(){
+  var row = document.getElementById('striprow');
+  if(row && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var off = 0, last = 0, hold = false, SPEED = 42; /* px per second */
+    var strip = row.parentElement;
+    strip.addEventListener('pointerenter', function(){ hold = true; });
+    strip.addEventListener('pointerleave', function(){ hold = false; });
+    var step = function(ts){
+      if(!last) last = ts;
+      var dt = Math.min(64, ts - last); last = ts;
+      if(!hold && document.visibilityState === 'visible'){
+        off += SPEED * dt / 1000;
+        var first = row.firstElementChild;
+        while(first && off >= first.getBoundingClientRect().width + 2){
+          off -= first.getBoundingClientRect().width + 2;
+          row.appendChild(first);
+          first = row.firstElementChild;
+        }
+        row.style.transform = 'translate3d(' + (-off).toFixed(1) + 'px,0,0)';
+      }
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
   var nav = document.getElementById('nav');
   if(nav){
     var onScroll = function(){ nav.classList.toggle('solid', scrollY > 40); };
